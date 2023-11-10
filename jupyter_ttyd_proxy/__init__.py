@@ -18,6 +18,7 @@ def setup_ttyd():
         if executable is None:
             return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', '--once', 'bash']
         else:
+            return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', '--once', 'bash']
             return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', '--once', 'tmux', 'new-session', '-A', '-s', 'main']
 
     return {
