@@ -16,10 +16,9 @@ def setup_ttyd():
 
         executable = shutil.which('tmux')
         if executable is None:
-            return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', 'bash']
+            return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', '-t', 'disableReconnect=true', 'bash']
         else:
-            # return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', '-t', 'disableReconnect=true', 'bash']
-            return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', 'tmux', 'new-session', '-A', '-s', 'main']
+            return ['ttyd', '-W', '-p', '{}'.format(port), '-t', 'enableSixel=true', '-t', 'disableReconnect=true', 'tmux', 'new-session', '-A', '-s', 'main']
 
     return {
         'command': _get_command,
