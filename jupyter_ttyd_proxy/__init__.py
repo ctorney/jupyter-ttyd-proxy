@@ -26,6 +26,6 @@ def setup_ttyd():
         'environment': {},
         'launcher_entry': {
             'title': 'Zellij (ttyd)',
-            'icon_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'icons', 'jupyter-ttyd-proxy.png')
+            'icon_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'icons', 'jupyter-ttyd-proxy.svg')
         }
     }
