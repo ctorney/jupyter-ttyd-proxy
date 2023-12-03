@@ -18,7 +18,7 @@ def setup_ttyd():
         if executable is None:
             return ['ttyd', '-W', '-p', '{}'.format(port), "-t", "fontSize=14", "-t", "enableSixel=true", "-t", "fontFamily=HackNerdFontMono", "-t", "titleFixed=jupyterhub",  '-t', 'enableSixel=true', '-t', 'disableReconnect=true', 'bash']
         else:
-            return ['ttyd', '-W', '-p', '{}'.format(port), "-t", "fontSize=14", "-t", "enableSixel=true", "-t", "fontFamily=HackNerdFontMono", "-t", "titleFixed=Zellij",  '-t', 'enableSixel=true', '-t', 'disableReconnect=true', "zellij", "attach", "-c", "'jupyterhub'"]
+            return ['ttyd', '-W', '-p', '{}'.format(port), "-t", "fontSize=14", "-t", "enableSixel=true", "-t", "fontFamily=HackNerdFontMono", "-t", "titleFixed=Zellij",  '-t', 'enableSixel=true', '-t', 'disableReconnect=true', "zellij", "attach", "-c"]
 
     return {
         'command': _get_command,
